@@ -1,0 +1,9 @@
+@suits.map do |suit|
+  {
+    id: suit.id,
+    brand: suit.brand,
+    color: suit.color,
+    price: suit.price,
+    size: suit.size,
+  }
+end
