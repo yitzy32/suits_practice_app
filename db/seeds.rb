@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+100.times do
+  suit = Suit.new brand: FFaker::NameIT.first_name, color: FFaker::Color.name, price: rand(300..600), size: rand(34..56)
+  suit.save
+end
