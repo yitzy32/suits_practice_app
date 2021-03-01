@@ -4,6 +4,18 @@ class Api::SuitsController < ApplicationController
     render "index.json.jb"
   end
 
+  def create
+    @suit = Suit.new(
+      id: params["id"],
+      brand: params["brand"],
+      color: params["color"],
+      size: params["size"],
+      price: params["price"],
+    )
+    @suit.save
+    render "show.json.jb"
+  end
+
   def show
     id = params["id"]
     @suit = Suit.find_by(id: id)
