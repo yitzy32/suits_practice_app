@@ -1,0 +1,7 @@
+{
+  id: @suit.id,
+  brand: @suit.brand,
+  size: @suit.size,
+  color: @suit.color,
+  price: @suit.price,
+}
