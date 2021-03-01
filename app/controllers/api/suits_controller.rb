@@ -21,4 +21,11 @@ class Api::SuitsController < ApplicationController
     @suit = Suit.find_by(id: id)
     render "show.json.jb"
   end
+
+  def destroy
+    id = params["id"]
+    suit = Suit.find_by(id: id)
+    suit.destroy
+    render json: { messsage: "The item has been removed" }
+  end
 end

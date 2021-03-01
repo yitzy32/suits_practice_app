@@ -10,5 +10,6 @@ Rails.application.routes.draw do
     get "/suits" => "suits#index"
     post "/suits" => "suits#create"
     get "/suits/:id" => "suits#show"
+    delete "/suits/:id" => "suits#destroy"
   end
 end
